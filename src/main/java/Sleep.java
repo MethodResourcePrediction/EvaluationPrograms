@@ -16,6 +16,9 @@ public class Sleep {
 
 	public static void main(String[] args) throws InterruptedException, NoSuchMethodException, SecurityException,
 			IllegalAccessException, IllegalArgumentException, InvocationTargetException {
+		if (args.length < 1) {
+			throw new IllegalArgumentException("Missing argument: method name");
+		}
 		String methodName = args[0];
 
 		Sleep sleep = new Sleep();
@@ -28,7 +31,7 @@ public class Sleep {
 	 * Expected: constant
 	 */
 	public void a(String[] args) throws InterruptedException {
-		Thread.sleep(200);
+		Thread.sleep(1000);
 	}
 
 	/**
@@ -248,6 +251,22 @@ public class Sleep {
 		Thread.sleep(sleep);
 
 		q(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
+	}
+
+	/**
+	 * Recursive method call.<br/>
+	 * Expected: count * sleep
+	 */
+	public void r(String[] args) throws InterruptedException {
+		int count = Integer.parseInt(args[0]);
+		long sleep = Long.parseLong(args[1]);
+
+		if (count == 0) {
+			return;
+		}
+		Thread.sleep(sleep);
+		r(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
+		Thread.sleep(sleep);
 	}
 
 	private static Method execute(Method[] methods, Sleep sleep, String methodName, String[] args)

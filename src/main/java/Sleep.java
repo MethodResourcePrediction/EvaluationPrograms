@@ -266,6 +266,7 @@ public class Sleep {
 		}
 		Thread.sleep(sleep);
 		r(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
+		r(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
 		Thread.sleep(sleep);
 	}
 

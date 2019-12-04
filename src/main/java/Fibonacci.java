@@ -14,7 +14,7 @@ public class Fibonacci {
 	}
 
 	public static void main(String args[]) {
-		int count = 17;
+		int count = 18;
 		System.out.print(n1 + " " + n2);// printing 0 and 1
 		try {
 			fibonacci(count - 2);

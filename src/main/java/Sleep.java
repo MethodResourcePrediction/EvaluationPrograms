@@ -255,7 +255,7 @@ public class Sleep {
 
 	/**
 	 * Recursive method call.<br/>
-	 * Expected: count * sleep
+	 * Expected: 2 * count * 2 * sleep
 	 */
 	public void r(String[] args) throws InterruptedException {
 		int count = Integer.parseInt(args[0]);

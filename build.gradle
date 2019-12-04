@@ -17,6 +17,13 @@ repositories {
     jcenter()
 }
 
+jar {
+	from {configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+	manifest{
+		attributes ('Main-Class': 'Sleep')
+	} 
+}
+
 dependencies {
 	// https://mvnrepository.com/artifact/commons-io/commons-io
 	compile group: 'commons-io', name: 'commons-io', version: '2.6'

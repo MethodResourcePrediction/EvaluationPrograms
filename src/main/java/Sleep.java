@@ -5,6 +5,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.stream.IntStream;
 
@@ -268,6 +269,30 @@ public class Sleep {
 		r(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
 		r(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
 		Thread.sleep(sleep);
+	}
+
+	/**
+	 * Recursive and loop method call.<br/>
+	 * Expected: count ^ 2 * sleep
+	 */
+	public void s(String[] args) throws InterruptedException {
+		int count = Integer.parseInt(args[0]);
+		long sleep = Long.parseLong(args[1]);
+
+		if (count == 0) {
+			return;
+		}
+		for (int i = 0; i < count; i++) {
+			Thread.sleep(sleep);
+		}
+		s(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
+	}
+
+	public void t(String[] args) throws InterruptedException {
+		Iterator<String> iterator = Arrays.asList(args).iterator();
+		while (iterator.hasNext()) {
+			Thread.sleep(100);
+		}
 	}
 
 	private static Method execute(Method[] methods, Sleep sleep, String methodName, String[] args)

@@ -3,5 +3,12 @@
 
 # Ignore Gradle build output directory
 build
-bin/
 
+*.jar
+bin/
+generated/
+ProfilerExecutions.xml
+*.log
+volume/
+extra_libs/
+file

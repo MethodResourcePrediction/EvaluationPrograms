@@ -167,14 +167,18 @@ public class Sleep {
 	 * Expected: count * sleep
 	 */
 	public void l(String[] args) throws InterruptedException {
-		int count = Integer.parseInt(args[0]);
 		long sleep = Long.parseLong(args[1]);
 
-		Iterator<?> iterator = IntStream.range(0, count).iterator();
+		Iterator<?> iterator = l_getIterator(args);
 		while (iterator.hasNext()) {
 			iterator.next();
 			Thread.sleep(sleep);
 		}
+	}
+	
+	private Iterator<?> l_getIterator(String[] args) {
+		int count = Integer.parseInt(args[0]);
+		return IntStream.range(0, count).iterator();
 	}
 
 	/**
@@ -288,9 +292,17 @@ public class Sleep {
 		s(new String[] { String.valueOf(count - 1), String.valueOf(sleep) });
 	}
 
+	/**
+	 * Array length
+	 * Expected: args.length * 100
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
 	public void t(String[] args) throws InterruptedException {
 		Iterator<String> iterator = Arrays.asList(args).iterator();
 		while (iterator.hasNext()) {
+			iterator.next();
 			Thread.sleep(100);
 		}
 	}

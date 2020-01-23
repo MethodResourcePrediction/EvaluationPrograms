@@ -1,8 +1,8 @@
-package com.java2novice.sorting;
+
 
 import java.util.stream.IntStream;
 
-public class MyQuickSort {
+public class QuickSort {
 
 	private int array[];
 	private int length;
@@ -56,7 +56,7 @@ public class MyQuickSort {
 	}
 
 	public static void main(String a[]) {
-		MyQuickSort sorter = new MyQuickSort();
+		QuickSort sorter = new QuickSort();
 		int inputLength = 1000000;
 		int[] input = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
 		sorter.sort(input);

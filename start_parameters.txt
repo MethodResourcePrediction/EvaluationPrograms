@@ -1,20 +1,27 @@
-a
-b 200
-c 200
-d 400 0.5
-e 200
-f true
-g true
-h true 200
-i 10 200
-j 10 200
-k 3 200
-l 10 200
-m 10 200
-n 5 200
-o 200
-p 200
-q 10 200
-r 5 100
-s 4 100
-t a b c d
+Sleep a
+Sleep b 200
+Sleep c 200
+Sleep d 400 0.5
+Sleep e 200
+Sleep f true
+Sleep g true
+Sleep h true 200
+Sleep i 10 200
+Sleep j 10 200
+Sleep k 3 200
+Sleep l 10 200
+Sleep m 10 200
+Sleep n 5 200
+Sleep o 200
+Sleep p 200
+Sleep q 10 200
+Sleep r 5 100
+Sleep s 4 100
+Sleep t a b c d
+GSON
+Encryption
+BubbleSort
+InsertionSort
+SelectionSort
+MergeSort
+QuickSort

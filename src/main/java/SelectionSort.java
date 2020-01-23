@@ -1,8 +1,8 @@
-package com.java2novice.algos;
+
 
 import java.util.stream.IntStream;
 
-public class MySelectionSort {
+public class SelectionSort {
 
 	public static int[] doSelectionSort(int[] arr) {
 		for (int i = 0; i < arr.length - 1; i++) {

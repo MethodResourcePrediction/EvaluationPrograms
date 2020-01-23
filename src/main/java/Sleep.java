@@ -175,7 +175,7 @@ public class Sleep {
 			Thread.sleep(sleep);
 		}
 	}
-	
+
 	private Iterator<?> l_getIterator(String[] args) {
 		int count = Integer.parseInt(args[0]);
 		return IntStream.range(0, count).iterator();
@@ -293,8 +293,7 @@ public class Sleep {
 	}
 
 	/**
-	 * Array length
-	 * Expected: args.length * 100
+	 * Array length Expected: args.length * 100
 	 * 
 	 * @param args
 	 * @throws InterruptedException

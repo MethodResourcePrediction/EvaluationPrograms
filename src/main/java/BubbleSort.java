@@ -1,8 +1,8 @@
-package com.java2novice.algos;
+
 
 import java.util.stream.IntStream;
 
-public class MyBubbleSort {
+public class BubbleSort {
 
 	// logic to sort the elements
 	public static void bubble_srt(int array[]) {

@@ -18,15 +18,11 @@ public class Encryption {
 
 	private Cipher cipher;
 
-	public static void main(String[] args)
-			throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException {
+	public static void main(String[] args) throws InvalidKeyException, NoSuchAlgorithmException, NoSuchPaddingException,
+			IllegalBlockSizeException, BadPaddingException, IOException {
 		Encryption encryption = new Encryption();
 
-		try {
-			encryption.encrypt(3.0d, 50);
-		} catch (InvalidKeyException | NoSuchAlgorithmException | NoSuchPaddingException | IllegalBlockSizeException
-				| BadPaddingException | IOException e) {
-		}
+		encryption.encrypt(3.0d, 50);
 	}
 
 	public Encryption() throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException {

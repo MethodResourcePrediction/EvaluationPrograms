@@ -1,8 +1,8 @@
-package com.java2novice.sorting;
+
 
 import java.util.stream.IntStream;
 
-public class MyMergeSort {
+public class MergeSort {
 	private int[] array;
 	private int[] tempMergArr;
 	private int length;
@@ -11,7 +11,7 @@ public class MyMergeSort {
 		int inputLength = 1000000;
 		int[] inputArr = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
 //		int[] inputArr = { 45, 23, 11, 89, 77, 98, 4, 28, 65, 43 };
-		MyMergeSort mms = new MyMergeSort();
+		MergeSort mms = new MergeSort();
 		mms.sort(inputArr);
 //		for (int i : inputArr) {
 //			System.out.print(i);

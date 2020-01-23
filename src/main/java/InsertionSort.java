@@ -1,8 +1,8 @@
-package com.java2novice.algos;
+
 
 import java.util.stream.IntStream;
 
-public class MyInsertionSort {
+public class InsertionSort {
 	public static void main(String a[]) {
 		int inputLength = 10000;
 		int[] arr1 = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();

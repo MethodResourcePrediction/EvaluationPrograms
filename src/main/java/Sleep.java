@@ -306,6 +306,43 @@ public class Sleep {
 		}
 	}
 
+	/**
+	 * Expected: a + b + c
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public void u(String[] args) throws InterruptedException {
+		Thread.sleep(Integer.parseInt(args[0]));
+		Thread.sleep(Integer.parseInt(args[1]));
+		Thread.sleep(Integer.parseInt(args[2]));
+	}
+
+	/**
+	 * Expected: 5 * 3 * args[0] (random)
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public void v(String[] args) throws InterruptedException {
+		Thread.sleep(Integer.parseInt(args[0]) * 3);
+		v2(args);
+	}
+
+	private boolean v2(String[] args) throws InterruptedException {
+		int arg0 = Integer.parseInt(args[0]);
+		String newArg0 = String.valueOf((int) (arg0 * Math.random()));
+		if (args.length <= 1) {
+			v(new String[] { newArg0, "3" });
+		} else {
+			int count = Integer.parseInt(args[1]);
+			if (count > 0) {
+				v(new String[] { newArg0, String.valueOf(count - 1) });
+			}
+		}
+		return true;
+	}
+
 	private static Method execute(Method[] methods, Sleep sleep, String methodName, String[] args)
 			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException {
 		// Find method by name

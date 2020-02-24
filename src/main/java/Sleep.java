@@ -82,7 +82,7 @@ public class Sleep {
 	 * Expected: constant 200 or 0
 	 */
 	public void f(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1)
+		@Range(min = 0, max = 2)
 		boolean b = Boolean.parseBoolean(args[0]);
 
 		if (b) {
@@ -95,7 +95,7 @@ public class Sleep {
 	 * Expected: constant 200 or 400
 	 */
 	public void g(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1)
+		@Range(min = 0, max = 2)
 		boolean b = Boolean.parseBoolean(args[0]);
 
 		if (b) {
@@ -110,7 +110,7 @@ public class Sleep {
 	 * Expected: linear
 	 */
 	public void h(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1)
+		@Range(min = 0, max = 2)
 		boolean b = Boolean.parseBoolean(args[0]);
 
 		@Range(min = 0, max = 3000)

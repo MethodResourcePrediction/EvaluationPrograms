@@ -20,10 +20,10 @@ Sleep s 4 100
 Sleep t a b c d
 Sleep u 50 100 150
 Sleep v 100
-GSON
-Encryption
-BubbleSort
-InsertionSort
-SelectionSort
-MergeSort
-QuickSort
+GSON main 1000000
+Encryption main 4.0 50
+BubbleSort main 20000
+InsertionSort main 10000
+SelectionSort main 10000
+MergeSort main 2000000
+QuickSort main 1000000

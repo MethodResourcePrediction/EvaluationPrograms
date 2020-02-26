@@ -1,6 +1,7 @@
 
-
 import java.util.stream.IntStream;
+
+import de.rherzog.master.thesis.annotations.Range;
 
 public class BubbleSort {
 
@@ -34,7 +35,8 @@ public class BubbleSort {
 	}
 
 	public static void main(String[] args) {
-		int inputLength = 5000;
+		@Range(min = 0, max = 50000)
+		int inputLength = Integer.parseInt(args[0]);
 		int[] input = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
 //		int[] input = { 4, 2, 9, 6, 23, 12, 34, 0, 1 };
 		bubble_srt(input);

@@ -10,6 +10,8 @@ import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.SecretKeySpec;
 
+import de.rherzog.master.thesis.annotations.Range;
+
 public class Encryption {
 	private final String algo = "AES";
 	private String key;
@@ -22,7 +24,13 @@ public class Encryption {
 			IllegalBlockSizeException, BadPaddingException, IOException {
 		Encryption encryption = new Encryption();
 
-		encryption.encrypt(3.0d, 50);
+		@Range(min = 0, max = 7.0)
+		double mbytes = Double.parseDouble(args[0]);
+
+		@Range(min = 0, max = 50)
+		int repetitions = Integer.parseInt(args[1]);
+
+		encryption.encrypt(mbytes, repetitions);
 	}
 
 	public Encryption() throws NoSuchAlgorithmException, NoSuchPaddingException, InvalidKeyException {

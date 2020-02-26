@@ -1,6 +1,7 @@
 
-
 import java.util.stream.IntStream;
+
+import de.rherzog.master.thesis.annotations.Range;
 
 public class QuickSort {
 
@@ -55,9 +56,12 @@ public class QuickSort {
 		array[j] = temp;
 	}
 
-	public static void main(String a[]) {
+	public static void main(String args[]) {
 		QuickSort sorter = new QuickSort();
-		int inputLength = 1000000;
+		
+		@Range(min = 0, max = 1000000)
+		int inputLength = Integer.parseInt(args[0]);
+		
 		int[] input = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
 		sorter.sort(input);
 //		for (int i : input) {

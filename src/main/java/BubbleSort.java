@@ -35,7 +35,7 @@ public class BubbleSort {
 	}
 
 	public static void main(String[] args) {
-		@Range(min = 0, max = 50000)
+		// @Range(min = 0, max = 50000)
 		int inputLength = Integer.parseInt(args[0]);
 		int[] input = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
 //		int[] input = { 4, 2, 9, 6, 23, 12, 34, 0, 1 };

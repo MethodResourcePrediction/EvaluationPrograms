@@ -20,7 +20,7 @@ public class SelectionSort {
 	}
 
 	public static void main(String args[]) {
-		@Range(min = 0, max = 10000)
+		// @Range(min = 0, max = 10000)
 		int inputLength = Integer.parseInt(args[0]);
 
 		int[] arr1 = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();

@@ -33,7 +33,7 @@ public class Sleep {
 	 * Expected: linear in loaded variable
 	 */
 	public void b(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 2000)
+		// @Range(min = 0, max = 2000)
 		long sleep = Long.valueOf(args[0]);
 		Thread.sleep(sleep);
 	}
@@ -44,7 +44,7 @@ public class Sleep {
 	 * Expected: linear in multiplication
 	 */
 	public void c(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.valueOf(args[0]);
 		Thread.sleep(sleep * 2);
 	}
@@ -54,10 +54,10 @@ public class Sleep {
 	 * Expected: linear in multiplication
 	 */
 	public void d(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.valueOf(args[0]);
 
-		@Range(min = 0, max = 5)
+		// @Range(min = 0, max = 5)
 		double fraction = Double.valueOf(args[1]);
 
 		Thread.sleep((long) (fraction * sleep));
@@ -69,10 +69,10 @@ public class Sleep {
 	 * random value)
 	 */
 	public void e(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 3000)
+		// @Range(min = 0, max = 3000)
 		long sleep = Long.valueOf(args[0]);
 
-		@Range(min = 0, max = 1)
+		// @Range(min = 0, max = 1)
 		double times = Math.random();
 		Thread.sleep((long) (times * sleep));
 	}
@@ -82,7 +82,7 @@ public class Sleep {
 	 * Expected: constant 200 or 0
 	 */
 	public void f(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 2)
+		// @Range(min = 0, max = 2)
 		boolean b = Boolean.parseBoolean(args[0]);
 
 		if (b) {
@@ -95,7 +95,7 @@ public class Sleep {
 	 * Expected: constant 200 or 400
 	 */
 	public void g(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 2)
+		// @Range(min = 0, max = 2)
 		boolean b = Boolean.parseBoolean(args[0]);
 
 		if (b) {
@@ -110,10 +110,10 @@ public class Sleep {
 	 * Expected: linear
 	 */
 	public void h(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 2)
+		// @Range(min = 0, max = 2)
 		boolean b = Boolean.parseBoolean(args[0]);
 
-		@Range(min = 0, max = 3000)
+		// @Range(min = 0, max = 3000)
 		long sleep = Long.parseLong(args[1]);
 
 		if (b) {
@@ -126,12 +126,12 @@ public class Sleep {
 	 * Expected: count * sleep
 	 */
 	public void i(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 5)
+		// @Range(min = 0, max = 5)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.parseLong(args[1]);
-		
+
 		for (int i = 0; i < count; i++) {
 			Thread.sleep(sleep);
 		}
@@ -142,10 +142,10 @@ public class Sleep {
 	 * Expected: count * sleep
 	 */
 	public void j(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 5)
+		// @Range(min = 0, max = 5)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.parseLong(args[1]);
 
 		int i = 0;
@@ -165,10 +165,10 @@ public class Sleep {
 	 * Expected: count^2 * sleep
 	 */
 	public void k(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 5)
+		// @Range(min = 0, max = 5)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 500)
+		// @Range(min = 0, max = 500)
 		long sleep = Long.parseLong(args[1]);
 
 		for (int i = 0; i < count; i++) {
@@ -183,7 +183,7 @@ public class Sleep {
 	 * Expected: count * sleep
 	 */
 	public void l(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 2000)
+		// @Range(min = 0, max = 2000)
 		long sleep = Long.parseLong(args[1]);
 
 		Iterator<?> iterator = l_getIterator(args);
@@ -204,10 +204,10 @@ public class Sleep {
 	 * method)
 	 */
 	public void m(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 10)
+		// @Range(min = 0, max = 10)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.parseLong(args[1]);
 
 		IntStream.range(0, count).forEach(n -> {
@@ -224,10 +224,10 @@ public class Sleep {
 	 * Expected: count * sleep + 5 * sleep + 1000
 	 */
 	public void n(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 10)
+		// @Range(min = 0, max = 10)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 500)
+		// @Range(min = 0, max = 500)
 		long sleep = Long.parseLong(args[1]);
 
 		for (int i = 0; i < count; i++) {
@@ -245,7 +245,7 @@ public class Sleep {
 	 * Expected: 5 * sleep
 	 */
 	public void o(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.parseLong(args[0]);
 
 		for (int i = 0; i < 5; i++) {
@@ -258,7 +258,7 @@ public class Sleep {
 	 * Expected: 5 * sleep + 1000
 	 */
 	public void p(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.parseLong(args[0]);
 
 		for (int i = 0; i < 5; i++) {
@@ -272,10 +272,10 @@ public class Sleep {
 	 * Expected: count * sleep
 	 */
 	public void q(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 10)
+		// @Range(min = 0, max = 10)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		long sleep = Long.parseLong(args[1]);
 
 		if (count == 0) {
@@ -291,10 +291,10 @@ public class Sleep {
 	 * Expected: 2 * count * 2 * sleep
 	 */
 	public void r(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 5)
+		// @Range(min = 0, max = 5)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 500)
+		// @Range(min = 0, max = 500)
 		long sleep = Long.parseLong(args[1]);
 
 		if (count == 0) {
@@ -311,10 +311,10 @@ public class Sleep {
 	 * Expected: count ^ 2 * sleep
 	 */
 	public void s(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 5)
+		// @Range(min = 0, max = 5)
 		int count = Integer.parseInt(args[0]);
 
-		@Range(min = 0, max = 500)
+		// @Range(min = 0, max = 500)
 		long sleep = Long.parseLong(args[1]);
 
 		if (count == 0) {
@@ -347,15 +347,15 @@ public class Sleep {
 	 * @throws InterruptedException
 	 */
 	public void u(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 2000)
+		// @Range(min = 0, max = 2000)
 		int a = Integer.parseInt(args[0]);
 		Thread.sleep(a);
 
-		@Range(min = 0, max = 2000)
+		// @Range(min = 0, max = 2000)
 		int b = Integer.parseInt(args[0]);
 		Thread.sleep(b);
 
-		@Range(min = 0, max = 2000)
+		// @Range(min = 0, max = 2000)
 		int c = Integer.parseInt(args[0]);
 		Thread.sleep(c);
 	}
@@ -367,7 +367,7 @@ public class Sleep {
 	 * @throws InterruptedException
 	 */
 	public void v(String[] args) throws InterruptedException {
-		@Range(min = 0, max = 1000)
+		// @Range(min = 0, max = 1000)
 		int sleep = Integer.parseInt(args[0]);
 
 		Thread.sleep(sleep * 3);

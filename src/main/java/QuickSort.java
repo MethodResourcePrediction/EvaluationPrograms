@@ -59,7 +59,7 @@ public class QuickSort {
 	public static void main(String args[]) {
 		QuickSort sorter = new QuickSort();
 		
-		@Range(min = 0, max = 1000000)
+		// @Range(min = 0, max = 1000000)
 		int inputLength = Integer.parseInt(args[0]);
 		
 		int[] input = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();

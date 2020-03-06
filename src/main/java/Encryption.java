@@ -24,10 +24,10 @@ public class Encryption {
 			IllegalBlockSizeException, BadPaddingException, IOException {
 		Encryption encryption = new Encryption();
 
-		@Range(min = 0, max = 7.0)
+//		@Range(min = 0, max = 7.0)
 		double mbytes = Double.parseDouble(args[0]);
 
-		@Range(min = 0, max = 50)
+//		@Range(min = 0, max = 50)
 		int repetitions = Integer.parseInt(args[1]);
 
 		encryption.encrypt(mbytes, repetitions);
@@ -58,7 +58,7 @@ public class Encryption {
 	public char[] generateData(double sizeMB) {
 		char data[] = new char[(int) (sizeMB * 1024 * 1024)];
 		try {
-			FileReader fileReader = new FileReader("/dev/zero");
+			FileReader fileReader = new FileReader("/dev/urandom");
 			fileReader.read(data);
 			fileReader.close();
 		} catch (IOException e) {

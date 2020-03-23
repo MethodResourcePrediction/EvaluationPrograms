@@ -6,26 +6,26 @@ import de.rherzog.master.thesis.annotations.Range;
 public class MergeSort {
 	private int[] array;
 	private int[] tempMergArr;
-	private int length;
 
 	public static void main(String args[]) {
 		// @Range(min = 0, max = 1000000)
-		int inputLength = Integer.parseInt(args[0]);
-		
-		int[] inputArr = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
-//		int[] inputArr = { 45, 23, 11, 89, 77, 98, 4, 28, 65, 43 };
-		MergeSort mms = new MergeSort();
-		mms.sort(inputArr);
+//		int length = Integer.parseInt(args[0]);
+//		int length = (int) (Math.random() * Integer.parseInt(args[0]));
+		int length = Integer.parseInt(args[0]);
+
+		new MergeSort().sort(length);
 //		for (int i : inputArr) {
 //			System.out.print(i);
 //			System.out.print(" ");
 //		}
 	}
 
-	public void sort(int inputArr[]) {
+	public void sort(int length) {
+		int[] inputArr = IntStream.range(0, length).map(n -> (int) (Math.random() * length)).toArray();
+
 		this.array = inputArr;
-		this.length = inputArr.length;
 		this.tempMergArr = new int[length];
+
 		doMergeSort(0, length - 1);
 	}
 

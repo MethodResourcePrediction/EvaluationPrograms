@@ -8,7 +8,21 @@ public class QuickSort {
 	private int array[];
 	private int length;
 
-	public void sort(int[] inputArr) {
+	public static void main(String args[]) {
+		QuickSort sorter = new QuickSort();
+
+		// @Range(min = 0, max = 1000000)
+		int inputLength = Integer.parseInt(args[0]);
+
+		int[] input = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
+		sorter.sort(input);
+//		for (int i : input) {
+//			System.out.print(i);
+//			System.out.print(" ");
+//		}
+	}
+
+	private void sort(int[] inputArr) {
 		if (inputArr == null || inputArr.length == 0) {
 			return;
 		}
@@ -54,19 +68,5 @@ public class QuickSort {
 		int temp = array[i];
 		array[i] = array[j];
 		array[j] = temp;
-	}
-
-	public static void main(String args[]) {
-		QuickSort sorter = new QuickSort();
-		
-		// @Range(min = 0, max = 1000000)
-		int inputLength = Integer.parseInt(args[0]);
-		
-		int[] input = IntStream.range(0, inputLength).map(n -> (int) (Math.random() * inputLength)).toArray();
-		sorter.sort(input);
-//		for (int i : input) {
-//			System.out.print(i);
-//			System.out.print(" ");
-//		}
 	}
 }

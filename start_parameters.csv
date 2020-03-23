@@ -1,0 +1,30 @@
+Method signature selector,Main-Class,Parameters
+LSleep;.a([Ljava/lang/String;)V,Sleep,a
+LSleep;.b([Ljava/lang/String;)V,Sleep,b 400
+LSleep;.c([Ljava/lang/String;)V,Sleep,c 400
+LSleep;.d([Ljava/lang/String;)V,Sleep,d 800 0.5
+LSleep;.e([Ljava/lang/String;)V,Sleep,e 400
+LSleep;.f([Ljava/lang/String;)V,Sleep,f true
+LSleep;.g([Ljava/lang/String;)V,Sleep,g true
+LSleep;.h([Ljava/lang/String;)V,Sleep,h true 400
+LSleep;.i([Ljava/lang/String;)V,Sleep,i 5 400
+LSleep;.j([Ljava/lang/String;)V,Sleep,j 10 400
+LSleep;.k([Ljava/lang/String;)V,Sleep,k 3 400
+LSleep;.l([Ljava/lang/String;)V,Sleep,l 10 400
+LSleep;.m([Ljava/lang/String;)V,Sleep,m 10 400
+LSleep;.n([Ljava/lang/String;)V,Sleep,n 5 400
+LSleep;.o([Ljava/lang/String;)V,Sleep,o 400
+LSleep;.p([Ljava/lang/String;)V,Sleep,p 400
+LSleep;.q([Ljava/lang/String;)V,Sleep,q 20 200
+LSleep;.r([Ljava/lang/String;)V,Sleep,r 5 50
+LSleep;.s([Ljava/lang/String;)V,Sleep,s 8 100
+LSleep;.t([Ljava/lang/String;)V,Sleep,t a b c d e f g h
+LSleep;.u([Ljava/lang/String;)V,Sleep,u 150 200 250
+LSleep;.v([Ljava/lang/String;)V,Sleep,v 200
+LGSON;.deserialize([Ljava/lang/String;)V,GSON,2000000
+LEncryption;.encrypt(DI)V,Encryption,8.0 50
+LBubbleSort;.bubble_srt([I)V,BubbleSort,1000
+LInsertionSort;.doInsertionSort([I)V,InsertionSort,1000
+LSelectionSort;.doSelectionSort([I)V,SelectionSort,1000
+LMergeSort;.doMergeSort(II)V,MergeSort,2000
+LQuickSort;.sort([I)V,QuickSort,10000

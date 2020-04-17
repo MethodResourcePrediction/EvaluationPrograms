@@ -388,6 +388,41 @@ public class Sleep {
 		return true;
 	}
 
+	/**
+	 * Expected: 5 * 200 + 5 * 100
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public void w(String[] args) throws InterruptedException {
+		// @Range(min = 0, max = 1000)
+		int i = 0;
+		for (; i < 5; i++) {
+			Thread.sleep(200);
+		}
+		for (; i < 10; i++) {
+			Thread.sleep(100);
+		}
+	}
+
+	/**
+	 * Expected: 2 * 500 + 5 * 100
+	 * 
+	 * @param args
+	 * @throws InterruptedException
+	 */
+	public void x(String[] args) throws InterruptedException {
+		// @Range(min = 0, max = 1000)
+		int i = 0;
+		for (; i < 2; i++) {
+			Thread.sleep(500);
+		}
+		i = 0;
+		for (; i < 5; i++) {
+			Thread.sleep(100);
+		}
+	}
+
 	private static Method execute(Method[] methods, Sleep sleep, String methodName, String[] args)
 			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException {
 		// Find method by name

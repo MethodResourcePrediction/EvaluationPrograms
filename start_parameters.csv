@@ -21,10 +21,12 @@ LSleep;.s([Ljava/lang/String;)V,Sleep,s 8 100
 LSleep;.t([Ljava/lang/String;)V,Sleep,t a b c d e f g h
 LSleep;.u([Ljava/lang/String;)V,Sleep,u 150 200 250
 LSleep;.v([Ljava/lang/String;)V,Sleep,v 200
+LSleep;.w([Ljava/lang/String;)V,Sleep,w
+LSleep;.x([Ljava/lang/String;)V,Sleep,x
 LGSON;.deserialize([Ljava/lang/String;)V,GSON,2000000
 LEncryption;.encrypt(DI)V,Encryption,8.0 50
-LBubbleSort;.bubble_srt([I)V,BubbleSort,1000
-LInsertionSort;.doInsertionSort([I)V,InsertionSort,1000
-LSelectionSort;.doSelectionSort([I)V,SelectionSort,1000
-LMergeSort;.doMergeSort(II)V,MergeSort,2000
-LQuickSort;.sort([I)V,QuickSort,10000
+LBubbleSort;.bubble_srt([I)V,BubbleSort,20000
+LInsertionSort;.doInsertionSort([I)V,InsertionSort,50000
+LSelectionSort;.doSelectionSort([I)V,SelectionSort,40000
+LMergeSort;.doMergeSort(II)V,MergeSort,1000000
+LQuickSort;.sort([I)V,QuickSort,4000000

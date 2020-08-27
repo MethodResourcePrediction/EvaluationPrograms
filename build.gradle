@@ -31,7 +31,7 @@ jar {
 
 dependencies {
 	compile files(
-		'../Annotations.jar',
+		'../Annotations/build/libs/Annotations.jar',
 	)
 	
 	// https://mvnrepository.com/artifact/commons-io/commons-io

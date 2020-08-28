@@ -422,6 +422,26 @@ public class Sleep {
 			Thread.sleep(100);
 		}
 	}
+	
+	
+	private class TestClass {
+		private int value;
+
+		private TestClass() {
+			this.value = (int) (10 * Math.random());
+		}
+		
+		private int value() {
+			return value;
+		}
+	}
+
+	public void y(String[] args) throws InterruptedException {
+		TestClass testClass = new TestClass();
+		for (int i = 0; i < testClass.value(); i++) {
+			Thread.sleep(100);
+		}
+	}
 
 	private static Method execute(Method[] methods, Sleep sleep, String methodName, String[] args)
 			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException {

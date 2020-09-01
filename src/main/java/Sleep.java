@@ -434,11 +434,22 @@ public class Sleep {
 		private int value() {
 			return value;
 		}
+
+		public boolean randomTrue() {
+			return Math.random() > 0.1d;
+		}
 	}
 
 	public void y(String[] args) throws InterruptedException {
 		TestClass testClass = new TestClass();
 		for (int i = 0; i < testClass.value(); i++) {
+			Thread.sleep(100);
+		}
+	}
+
+	public void z(String[] args) throws InterruptedException {
+		TestClass testClass = new TestClass();
+		while (testClass.randomTrue()) {
 			Thread.sleep(100);
 		}
 	}

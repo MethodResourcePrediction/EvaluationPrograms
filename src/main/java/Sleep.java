@@ -425,14 +425,16 @@ public class Sleep {
 	
 	
 	private class TestClass {
-		private int value;
+		private int value1;
+		private int value2;
 
 		private TestClass() {
-			this.value = (int) (10 * Math.random());
+			this.value1 = (int) (10 * Math.random());
+			this.value2 = (int) (10 * Math.random());
 		}
 		
 		private int value() {
-			return value;
+			return value1 * value2;
 		}
 
 		public boolean randomTrue() {

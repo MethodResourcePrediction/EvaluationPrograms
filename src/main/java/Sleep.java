@@ -449,6 +449,20 @@ public class Sleep {
 		}
 	}
 
+	public void y2(String[] args) throws InterruptedException {
+		for (int i = 0; i < new TestClass().value(); i++) {
+			Thread.sleep(100);
+		}
+	}
+
+	public void y3(String[] args) throws InterruptedException {
+		TestClass testClass = new TestClass();
+		for (int i = 0; i < testClass.value(); i++) {
+			Thread.sleep(100);
+			testClass = new TestClass();
+		}
+	}
+
 	public void z(String[] args) throws InterruptedException {
 		TestClass testClass = new TestClass();
 		while (testClass.randomTrue()) {
